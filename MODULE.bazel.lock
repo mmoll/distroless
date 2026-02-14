@@ -213,7 +213,7 @@
   "moduleExtensions": {
     "//private/extensions:busybox.bzl%busybox": {
       "general": {
-        "bzlTransitiveDigest": "6vXwOWonk0kab+sf28JyVKRu5coRnbwnwOGvpKIwmW4=",
+        "bzlTransitiveDigest": "2nWrzqsnviblTGDIwTafE2JX1mnDXdSbDguebLnnfGE=",
         "usagesDigest": "UCTBBIE9+u3oELYh8ApcyzAQkd2fqSup4Dt7wKNQjRY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -273,6 +273,17 @@
               ],
               "build_file_content": "filegroup(\n    name = \"file\",\n    srcs = [\"bin/busybox\"],\n    visibility = [\"//visibility:public\"]\n)\n"
             }
+          },
+          "busybox_riscv64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "sha256": "17737180c892fb9eac75524ae789040f0b01415e6e05e063bc2b8f982b340d97",
+              "urls": [
+                "https://raw.githubusercontent.com/docker-library/busybox/eabe7cf678f2abbc0477a8603428519771ede877/latest/musl/riscv64/rootfs.tar.gz"
+              ],
+              "build_file_content": "filegroup(\n    name = \"file\",\n    srcs = [\"bin/busybox\"],\n    visibility = [\"//visibility:public\"]\n)\n"
+            }
           }
         },
         "moduleExtensionMetadata": {
@@ -281,7 +292,8 @@
             "busybox_arm",
             "busybox_arm64",
             "busybox_s390x",
-            "busybox_ppc64le"
+            "busybox_ppc64le",
+            "busybox_riscv64"
           ],
           "explicitRootModuleDirectDevDeps": [],
           "useAllRepos": "NO",
